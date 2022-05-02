@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="50dp"
+            android:id="@+id/profimage"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="50dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twitter Data"
+            android:layout_margin="2dp"
+            android:textSize="28dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:id="@+id/tname"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dob :"
+            android:id="@+id/dob"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Verified :"
+            android:layout_margin="2dp"
+            android:id="@+id/tav"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website :"
+            android:id="@+id/tweb"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio :"
+            android:id="@+id/tbio"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Followers :"
+            android:id="@+id/tfoll"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following :"
+            android:id="@+id/tfing"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joined On :"
+            android:id="@+id/tjoi"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Git Hub Data"
+            android:layout_margin="2dp"
+            android:textSize="28dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio :"
+            android:textSize="12dp"
+            android:id="@+id/gbio"
+            android:layout_margin="2dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location:"
+            android:layout_margin="2dp"
+            android:id="@+id/glocation"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram Data"
+            android:textSize="28dp"
+            android:layout_margin="2dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Followers :"
+            android:id="@+id/ifol"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following :"
+            android:id="@+id/ifing"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is Private :"
+            android:id="@+id/iprivate"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

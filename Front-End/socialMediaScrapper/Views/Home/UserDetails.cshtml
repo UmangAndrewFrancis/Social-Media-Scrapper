@@ -1,0 +1,247 @@
+﻿@model socialMediaScrapper.Models.scrappedUser
+@{
+    ViewBag.Title = "UserDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center"><i>User Details</i></h3>
+
+@if (Model == null)
+{
+    return;
+}
+
+@if (Model._scrappedTwitterInfo.full_name != null)
+{
+    <div>
+        <h3 class="text-primary">Twitter Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>Name</td>
+                <td>@Model._scrappedTwitterInfo.full_name</td>
+            </tr>
+            <tr>
+                <td>Profile Banner</td>
+                <td><img src="@Url.Content(Model._scrappedTwitterInfo.banner)" alt="Image" /></td>
+            </tr>
+            <tr>
+                <th>Link to profile picture</th>
+                <td><a href="@Url.Content(Model._scrappedTwitterInfo.profile_image_link)">Click Here</a></td>
+            </tr>
+            <tr>
+                <td>Account Verified</td>
+                <td>@Model._scrappedTwitterInfo.account_verified</td>
+            </tr>
+            <tr>
+                <td>Birth Date</td>
+                <td>@Model._scrappedTwitterInfo.birth_date</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>@Model._scrappedTwitterInfo.location</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td>@Model._scrappedTwitterInfo.website</td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>@Model._scrappedTwitterInfo.bio</td>
+            </tr>
+            <tr>
+                <td>Followers</td>
+                <td>@Model._scrappedTwitterInfo.followers</td>
+            </tr>
+            <tr>
+                <td>Following</td>
+                <td>@Model._scrappedTwitterInfo.following</td>
+            </tr>
+            <tr>
+                <td>Joined On</td>
+                <td>@Model._scrappedTwitterInfo.joined_date</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+    <div>
+        <h3 class="text-primary">Twitter Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>No data available on twitter for the given Username</td>
+            </tr>
+        </table>
+    </div>
+}
+
+@if (Model._scrappedGithubInfo.full_name != null)
+{
+    <div>
+        <h3 class="text-primary">GitHub Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>Name</td>
+                <td>@Model._scrappedGithubInfo.full_name</td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>@Model._scrappedGithubInfo.bio</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>@Model._scrappedGithubInfo.location</td>
+            </tr>
+            <tr>
+                <td>contributions</td>
+                <td>@Model._scrappedGithubInfo.contributions</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+    <div>
+        <h3 class="text-primary">GitHub Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>No data available on github for the given Username</td>
+            </tr>
+        </table>
+    </div>
+}
+
+@if (Model._scrappedInstagramInfo.profile_image != null)
+{
+    <div>
+        <h3 class="text-primary">Instagram Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>Profile Pic</td>
+                @*<td><img src="@Url.Content(Model._scrappedInstagramInfo.profile_image)" alt="Image" /></td>*@
+                <td><a href="@Url.Content(Model._scrappedInstagramInfo.profile_image)">Click Here</a></td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>@Model._scrappedInstagramInfo.bio</td>
+            </tr>
+            <tr>
+                <td>Posts</td>
+                <td>@Model._scrappedInstagramInfo.posts_count</td>
+            </tr>
+            <tr>
+                <td>Followers</td>
+                <td>@Model._scrappedInstagramInfo.followers</td>
+            </tr>
+            <tr>
+                <td>Following</td>
+                <td>@Model._scrappedInstagramInfo.followings</td>
+            </tr>
+            <tr>
+                <td>Is Private</td>
+                <td>@Model._scrappedInstagramInfo.is_private</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+    <div>
+        <h3 class="text-primary">Instagram Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>No data available on instagram  for the given Username</td>
+            </tr>
+        </table>
+    </div>
+}
+@if (Model._scrappedPinterestInfo.id != null)
+{
+    <div>
+        <h3 class="text-primary">Pinterest Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>Profile Pic</td>
+                <td><img src="@Url.Content(Model._scrappedPinterestInfo.profile_image)" alt="Image" /></td>
+                @*<td><a href="@Url.Content(Model._scrappedPinterestInfo.profile_image)">Click Here</a></td>*@
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td>@Model._scrappedPinterestInfo.full_name</td>
+            </tr>
+            <tr>
+                <td>Followers</td>
+                <td>@Model._scrappedPinterestInfo.followers</td>
+            </tr>
+            <tr>
+                <td>Following</td>
+                <td>@Model._scrappedPinterestInfo.followings</td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>@Model._scrappedPinterestInfo.bio</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>@Model._scrappedPinterestInfo.country</td>
+            </tr>
+            <tr>
+                <td>Impressum URL</td>
+                <td>@Model._scrappedPinterestInfo.impressum_url</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td>@Model._scrappedPinterestInfo.website</td>
+            </tr>
+            <tr>
+                <td>Board Count</td>
+                <td>@Model._scrappedPinterestInfo.board_count</td>
+            </tr>
+            <tr>
+                <td>Is Indexed</td>
+                <td>@Model._scrappedPinterestInfo.is_indexed</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>@Model._scrappedPinterestInfo.location</td>
+            </tr>
+            <tr>
+                <td>Pin Count</td>
+                <td>@Model._scrappedPinterestInfo.pin_count</td>
+            </tr>
+            <tr>
+                <td>Is Verified</td>
+                <td>@Model._scrappedPinterestInfo.is_verified</td>
+            </tr>
+            <tr>
+                <td>Profile View</td>
+                <td>@Model._scrappedPinterestInfo.profile_view</td>
+            </tr>
+            <tr>
+                <td>Interests Following Count</td>
+                <td>@Model._scrappedPinterestInfo.interest_following_count</td>
+            </tr>
+            <tr>
+                <td>Published Pints</td>
+                <td>@Model._scrappedPinterestInfo.has_published_pins</td>
+            </tr>
+            <tr>
+                <td>Video Pins</td>
+                <td>@Model._scrappedPinterestInfo.video_pin_count</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+    <div>
+        <h3 class="text-primary">Instagram Data:</h3>
+        <table class="table table-hover">
+            <tr>
+                <td>No data available on instagram  for the given Username</td>
+            </tr>
+        </table>
+    </div>
+}
+
+@Html.ActionLink("Home Page", "Index", "Home")
